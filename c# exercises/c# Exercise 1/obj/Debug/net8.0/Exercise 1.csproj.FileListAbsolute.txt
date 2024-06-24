@@ -1,0 +1,28 @@
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.AssemblyInfoInputs.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.AssemblyInfo.cs
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.csproj.CoreCompileInputs.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\bin\Debug\net8.0\Exercise 1.exe
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\bin\Debug\net8.0\Exercise 1.deps.json
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\bin\Debug\net8.0\Exercise 1.runtimeconfig.json
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\bin\Debug\net8.0\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\bin\Debug\net8.0\Exercise 1.pdb
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\refint\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.pdb
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\Exercise 1.genruntimeconfig.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\LOL\Exercise 1\obj\Debug\net8.0\ref\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\bin\Debug\net8.0\Exercise 1.exe
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\bin\Debug\net8.0\Exercise 1.deps.json
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\bin\Debug\net8.0\Exercise 1.runtimeconfig.json
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\bin\Debug\net8.0\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\bin\Debug\net8.0\Exercise 1.pdb
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.AssemblyInfoInputs.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.AssemblyInfo.cs
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.csproj.CoreCompileInputs.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\refint\Exercise 1.dll
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.pdb
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\Exercise 1.genruntimeconfig.cache
+C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\c# exercises\c# Exercise 1\obj\Debug\net8.0\ref\Exercise 1.dll

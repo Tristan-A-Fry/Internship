@@ -1,0 +1,12 @@
+Exercise #1 - Create a Program file for each problem
+
+1) Create a script that generates Fibonacci sequences. The program should accept from user input (Through Console application) the term limit of the Fibonacci.
+	- Link: https://en.wikipedia.org/wiki/Fibonacci_sequence
+
+2) Create a script that generates Palindrome number. The number limit to generate Palindrome is 250,000
+	- Link: https://mathworld.wolfram.com/PalindromicNumber.html#:~:text=.,(OEIS%20A002113).
+
+3) Create a script that find the 500th prime number 
+
+4) Create a script that reads mazes from a file. The maze starts in the position that contains '*'. The walls of the maze are defined with '0' and paths with '1'. 
+Your script must find the prize defined with '$' and replace the path that found the destination with '2'. See file 'maze_result' for example. If maze doesn't have a valid prize, the result file must say: "Maze doesn't have prize or valid prize"
