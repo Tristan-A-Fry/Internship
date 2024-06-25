@@ -1,0 +1,17 @@
+1) Update the API created in problem #2 Exercise #2 of the ASP.Net Module to include authentication and authorization. Must use the 'IUserRepository' class as data service for authentication.
+Must create an endpoint that generates a JWT after authentication occurs and return the token to the clients. Within the JWT, the roles must be included in the claims under 'Roles' to restrict endpoints access in the API.
+
+Also, must include the following updates in the API:
+	- All endpoints in the API must be protected (except the login endpoint). Only authenticated users can access the API
+	- Must add JWT Bearer Token Authorization Functionality In Swagger to test the endpoint through the UI
+	- The following endpoints can only be called by admin users (Hint: This can be accomplish with policies with/without Auth requirements and handlers)
+		- PUT suppliers, PUT productCategories, PUT products
+
+
+
+2) Update the console app created in problem #2 Exercise #2 of the ASP.Net Module to authenticate with the API before making any calls against the API. The console app must prompt users to enter credentials before presenting the menu.
+The console app must handle unauthorized access exception returned by the API if the user doesn't have enough privileges.
+
+
+
+(Hint: You can use HTTP message handler to include the access token in all API calls after the authentication)
