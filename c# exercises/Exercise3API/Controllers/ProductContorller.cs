@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace Exercise3ConsoleApi.Controllers
 {
@@ -13,6 +14,10 @@ namespace Exercise3ConsoleApi.Controllers
         [Authorize] // This allows access to authenticated users
         public IActionResult GetProducts()
         {
+            LogUserClaims();
+            var userRoles = User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+            Console.WriteLine($"User roles: {string.Join(", ", userRoles)}");
+
             var products = ProductData.GetProducts();
             return Ok(products);
         }
@@ -21,8 +26,23 @@ namespace Exercise3ConsoleApi.Controllers
         [Authorize(Policy = "AdminPolicy")] // This restricts access to users with the Admin role
         public IActionResult UpdateProduct([FromBody] Product product)
         {
-            // Update product logic
+            LogUserClaims();
+            var userRoles = User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
+            Console.WriteLine($"User roles: {string.Join(", ", userRoles)}");
+
+            if (!userRoles.Contains("Admin"))
+            {
+                return Forbid();
+            } 
             return Ok();
+        }
+         private void LogUserClaims()
+        {
+            Console.WriteLine("User Claims:");
+            foreach (var claim in User.Claims)
+            {
+                Console.WriteLine($"{claim.Type}: {claim.Value}");
+            }
         }
     }
 

@@ -1,7 +1,7 @@
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.IdentityModel.Tokens;
 
 public static class JwtTokenGenerator
 {
@@ -19,11 +19,12 @@ public static class JwtTokenGenerator
 
         var token = new JwtSecurityToken(
             issuer: configuration["Jwt:Issuer"],
-            audience: configuration["Jwt:Issuer"],
+            audience: configuration["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.Now.AddMinutes(30),
+            expires: DateTime.Now.AddMinutes(Convert.ToDouble(configuration["Jwt:DurationInMinutes"])),
             signingCredentials: creds);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
+

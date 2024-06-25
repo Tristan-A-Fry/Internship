@@ -60,6 +60,7 @@ namespace Exercise3ConsoleApp
             {
                 var result = await response.Content.ReadFromJsonAsync<AuthenticationResult>();
                 _token = result?.Token;
+                Console.WriteLine($"Token: {_token}");
             }
             catch (Exception ex)
             {
@@ -72,7 +73,7 @@ namespace Exercise3ConsoleApp
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
 
-            var response = await client.GetAsync("http://localhost:5263/api/example/products");
+            var response = await client.GetAsync("http://localhost:5263/products");
 
             var responseContent = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"Response: {responseContent}");
@@ -126,5 +127,6 @@ namespace Exercise3ConsoleApp
         public decimal Price { get; set; }
     }
 }
+
 
 

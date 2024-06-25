@@ -16,7 +16,8 @@
 			{
 				return result;
 			}
-			
+		 	Console.WriteLine($"User '{userName}' authenticated with roles: {string.Join(", ", userInfo.Roles)}");
+	
 			result.IsSuccess = true;
 			result.Roles = userInfo.Roles;
 			
