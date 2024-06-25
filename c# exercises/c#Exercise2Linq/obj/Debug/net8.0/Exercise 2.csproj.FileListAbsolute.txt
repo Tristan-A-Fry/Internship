@@ -12,3 +12,18 @@ C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\Exercise 2\obj\Debug\net8.0\re
 C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\Exercise 2\obj\Debug\net8.0\Exercise 2.pdb
 C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\Exercise 2\obj\Debug\net8.0\Exercise 2.genruntimeconfig.cache
 C:\Users\tfry\OneDrive - Talos Energy LLC\Desktop\Exercise 2\obj\Debug\net8.0\ref\Exercise 2.dll
+E:\Internship\c# exercises\c#Exercise2Linq\bin\Debug\net8.0\Exercise 2.exe
+E:\Internship\c# exercises\c#Exercise2Linq\bin\Debug\net8.0\Exercise 2.deps.json
+E:\Internship\c# exercises\c#Exercise2Linq\bin\Debug\net8.0\Exercise 2.runtimeconfig.json
+E:\Internship\c# exercises\c#Exercise2Linq\bin\Debug\net8.0\Exercise 2.dll
+E:\Internship\c# exercises\c#Exercise2Linq\bin\Debug\net8.0\Exercise 2.pdb
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.AssemblyInfoInputs.cache
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.AssemblyInfo.cs
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.csproj.CoreCompileInputs.cache
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.sourcelink.json
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.dll
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\refint\Exercise 2.dll
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.pdb
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\Exercise 2.genruntimeconfig.cache
+E:\Internship\c# exercises\c#Exercise2Linq\obj\Debug\net8.0\ref\Exercise 2.dll

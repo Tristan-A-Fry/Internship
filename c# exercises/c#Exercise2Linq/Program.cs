@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+
 public class Program
 {
     public static void Main()
@@ -7,5 +8,6 @@ public class Program
 
         ProgramProductData.ProcessProductData();
         ProgramOutputFile.OutputFile();
+        ProgramSearchBOEM.searchBoem().Wait();
     }
 }

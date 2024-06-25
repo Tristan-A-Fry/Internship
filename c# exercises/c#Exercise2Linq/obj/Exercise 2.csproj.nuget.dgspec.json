@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tfry\\OneDrive - Talos Energy LLC\\Desktop\\Exercise 2\\Exercise 2.csproj": {}
+    "E:\\Internship\\c# exercises\\c#Exercise2Linq\\Exercise 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tfry\\OneDrive - Talos Energy LLC\\Desktop\\Exercise 2\\Exercise 2.csproj": {
+    "E:\\Internship\\c# exercises\\c#Exercise2Linq\\Exercise 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tfry\\OneDrive - Talos Energy LLC\\Desktop\\Exercise 2\\Exercise 2.csproj",
+        "projectUniqueName": "E:\\Internship\\c# exercises\\c#Exercise2Linq\\Exercise 2.csproj",
         "projectName": "Exercise 2",
-        "projectPath": "C:\\Users\\tfry\\OneDrive - Talos Energy LLC\\Desktop\\Exercise 2\\Exercise 2.csproj",
-        "packagesPath": "C:\\Users\\tfry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tfry\\OneDrive - Talos Energy LLC\\Desktop\\Exercise 2\\obj\\",
+        "projectPath": "E:\\Internship\\c# exercises\\c#Exercise2Linq\\Exercise 2.csproj",
+        "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
+        "outputPath": "E:\\Internship\\c# exercises\\c#Exercise2Linq\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tfry\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
