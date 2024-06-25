@@ -796,11 +796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tfry\\Internship\\c# exercises\\c#Exercisee3\\c#Exercisee3.csproj",
+      "projectUniqueName": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3api\\c#Exercisee3.csproj",
       "projectName": "c#Exercisee3",
-      "projectPath": "C:\\Users\\tfry\\Internship\\c# exercises\\c#Exercisee3\\c#Exercisee3.csproj",
+      "projectPath": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3api\\c#Exercisee3.csproj",
       "packagesPath": "C:\\Users\\tfry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tfry\\Internship\\c# exercises\\c#Exercisee3\\obj\\",
+      "outputPath": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tfry\\AppData\\Roaming\\NuGet\\NuGet.Config"

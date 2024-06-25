@@ -215,11 +215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise2Linq\\Exercise 2.csproj",
+      "projectUniqueName": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3consoleapp\\Exercise 2.csproj",
       "projectName": "Exercise 2",
-      "projectPath": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise2Linq\\Exercise 2.csproj",
+      "projectPath": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3consoleapp\\Exercise 2.csproj",
       "packagesPath": "C:\\Users\\tfry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise2Linq\\obj\\",
+      "outputPath": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3consoleapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tfry\\AppData\\Roaming\\NuGet\\NuGet.Config"

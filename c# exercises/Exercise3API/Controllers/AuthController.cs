@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 
-namespace c_Exercisee3.Controllers;
+namespace Exercise3api.Controllers;
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

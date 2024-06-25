@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UpppTfWmpDA=",
+  "dgSpecHash": "VVeXIvUNXy0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise2Linq\\Exercise 2.csproj",
+  "projectFilePath": "C:\\Users\\tfry\\internship\\c# exercises\\exercise3consoleapp\\Exercise 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tfry\\.nuget\\packages\\system.net.http.json\\8.0.0\\system.net.http.json.8.0.0.nupkg.sha512",
     "C:\\Users\\tfry\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",

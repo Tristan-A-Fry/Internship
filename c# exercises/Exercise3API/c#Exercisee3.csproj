@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>c_Exercisee3</RootNamespace>
+    <RootNamespace>Exercise3api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
