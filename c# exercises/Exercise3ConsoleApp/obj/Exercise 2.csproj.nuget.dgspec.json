@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj": {}
+    "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj": {}
   },
   "projects": {
-    "E:\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj": {
+    "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj",
+        "projectUniqueName": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj",
         "projectName": "Exercise 2",
-        "projectPath": "E:\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj",
-        "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
-        "outputPath": "E:\\Internship\\c# exercises\\Exercise3ConsoleApp\\obj\\",
+        "projectPath": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise3ConsoleApp\\Exercise 2.csproj",
+        "packagesPath": "C:\\Users\\tfry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tfry\\Internship\\c# exercises\\Exercise3ConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tfry\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

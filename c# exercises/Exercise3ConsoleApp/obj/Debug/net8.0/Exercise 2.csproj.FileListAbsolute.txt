@@ -88,3 +88,11 @@ E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.Identi
 E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\obj\Debug\net8.0\Exercise 2.csproj.AssemblyReference.cache
+C:\Users\tfry\Internship\c# exercises\Exercise3ConsoleApp\obj\Debug\net8.0\Exercise 2.csproj.Up2Date
