@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 
-namespace Exercise3ConsoleApi.Controllers
+namespace Exercise3api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class ExampleController : ControllerBase
+    public class ProductController : ControllerBase
     {
         [HttpGet("products")]
-        [Authorize] // This allows access to authenticated users
         public IActionResult GetProducts()
         {
             LogUserClaims();
@@ -33,10 +33,15 @@ namespace Exercise3ConsoleApi.Controllers
             if (!userRoles.Contains("Admin"))
             {
                 return Forbid();
-            } 
+            }
+
+            // Assuming you would update the product here
+            // UpdateProductInDatabase(product);
+
             return Ok();
         }
-         private void LogUserClaims()
+
+        private void LogUserClaims()
         {
             Console.WriteLine("User Claims:");
             foreach (var claim in User.Claims)
@@ -50,7 +55,7 @@ namespace Exercise3ConsoleApi.Controllers
     {
         public static List<Product> GetProducts()
         {
-            return new List<Product>()
+            return new List<Product>
             {
                 new Product
                 {

@@ -65,3 +65,26 @@ C:\Users\tfry\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exerc
 C:\Users\tfry\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.pdb
 C:\Users\tfry\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.genruntimeconfig.cache
 C:\Users\tfry\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\ref\Exercise 2.dll
+E:\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.exe
+E:\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.deps.json
+E:\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.runtimeconfig.json
+E:\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.dll
+E:\internship\c# exercises\exercise3consoleapp\bin\Debug\net8.0\Exercise 2.pdb
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.GeneratedMSBuildEditorConfig.editorconfig
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.AssemblyInfoInputs.cache
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.AssemblyInfo.cs
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.csproj.CoreCompileInputs.cache
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.sourcelink.json
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.dll
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\refint\Exercise 2.dll
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.pdb
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\Exercise 2.genruntimeconfig.cache
+E:\internship\c# exercises\exercise3consoleapp\obj\Debug\net8.0\ref\Exercise 2.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\obj\Debug\net8.0\Exercise 2.csproj.AssemblyReference.cache
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\obj\Debug\net8.0\Exercise 2.csproj.Up2Date
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\Internship\c# exercises\Exercise3ConsoleApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

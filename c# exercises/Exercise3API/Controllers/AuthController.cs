@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Linq;
+using System.Collections.Generic;
 
-namespace Exercise3api.Controllers;
+namespace Exercise3api.Controllers
+{
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -17,21 +17,24 @@ namespace Exercise3api.Controllers;
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginModel login)
+        public IActionResult Login([FromBody] UserLogin userLogin)
         {
-            var result = _userRepository.Authenticate(login.Username, login.Password);
-            if (!result.IsSuccess)
+            var authResult = _userRepository.Authenticate(userLogin.Username, userLogin.Password);
+
+            if (!authResult.IsSuccess)
             {
                 return Unauthorized();
             }
 
-            var token = JwtTokenGenerator.GenerateToken(login.Username, result.Roles, _configuration);
+            var token = JwtTokenGenerator.GenerateToken(userLogin.Username, authResult.Roles, _configuration);
             return Ok(new { Token = token });
         }
     }
 
-    public class LoginModel
+    public class UserLogin
     {
         public string Username { get; set; }
         public string Password { get; set; }
     }
+}
+

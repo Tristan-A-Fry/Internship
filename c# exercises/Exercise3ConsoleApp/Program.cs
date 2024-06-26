@@ -1,132 +1,98 @@
 using System;
-using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
+using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Exercise3ConsoleApp
 {
     public class Program
     {
-        private static string _token;
+        private static readonly HttpClient client = new HttpClient();
+        private static bool isAdmin = false;
 
         public static async Task Main(string[] args)
         {
-            await Authenticate();
+            Console.WriteLine("Starting the application...");
 
-            if (string.IsNullOrEmpty(_token))
+            // Authentication process
+            if (await AuthenticateUser())
             {
-                Console.WriteLine("Authentication failed. Exiting application.");
-                return;
-            }
-
-            // Now you can call API methods with the token
-            var success = await CallProtectedApiMethods();
-
-            if (!success)
-            {
-                Console.WriteLine("Unauthorized access detected. Exiting application.");
-                return;
-            }
-
-            // Original functionalities
-            ProgramProductData.ProcessProductData();
-            ProgramOutputFile.OutputFile();
-            // ProgramSearchBOEM.searchBoem().Wait();
-        }
-
-        private static async Task Authenticate()
-        {
-            Console.WriteLine("Enter Username:");
-            var username = Console.ReadLine();
-            Console.WriteLine("Enter Password:");
-            var password = Console.ReadLine();
-
-            var client = new HttpClient();
-            var loginModel = new { Username = username, Password = password };
-            var response = await client.PostAsJsonAsync("http://localhost:5263/api/auth/login", loginModel);
-
-            var responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Response: {responseContent}");
-
-            if (!response.IsSuccessStatusCode)
-            {
-                Console.WriteLine("Invalid credentials.");
-                return;
-            }
-
-            try
-            {
-                var result = await response.Content.ReadFromJsonAsync<AuthenticationResult>();
-                _token = result?.Token;
-                Console.WriteLine($"Token: {_token}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error parsing JSON response: {ex.Message}");
-            }
-        }
-
-        private static async Task<bool> CallProtectedApiMethods()
-        {
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
-
-            var response = await client.GetAsync("http://localhost:5263/products");
-
-            var responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"Response: {responseContent}");
-
-            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-            {
-                Console.WriteLine("Unauthorized access.");
-                return false;
-            }
-
-            if (!response.IsSuccessStatusCode)
-            {
-                Console.WriteLine($"Failed to fetch products. Status Code: {response.StatusCode}");
-                return false;
-            }
-
-            try
-            {
-                var products = await response.Content.ReadFromJsonAsync<List<Product>>();
-                if (products != null)
+                if (isAdmin)
                 {
-                    // Handle products (for example, display them)
-                    foreach (var product in products)
-                    {
-                        Console.WriteLine($"{product.Name} - {product.Category} - {product.Price}");
-                    }
+                    // Run exercise code
+                    ProgramProductData.ProcessProductData();
+                    ProgramOutputFile.OutputFile();
+                    // Add any additional method calls here
                 }
                 else
                 {
-                    Console.WriteLine("No products returned.");
+                    Console.WriteLine("You do not have the necessary permissions to run this program.");
                 }
-                return true;
+            }
+            else
+            {
+                Console.WriteLine("Authentication failed. Exiting application...");
+            }
+        }
+
+        private static async Task<bool> AuthenticateUser()
+        {
+            Console.Write("Enter username: ");
+            var username = Console.ReadLine();
+
+            Console.Write("Enter password: ");
+            var password = Console.ReadLine();
+
+            var loginData = new { Username = username, Password = password };
+            var json = JsonConvert.SerializeObject(loginData);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var response = await client.PostAsync("http://localhost:5028/api/auth/login", data); // Change the URL to your API endpoint
+                var result = await response.Content.ReadAsStringAsync();
+
+                Console.WriteLine($"Response: {result}"); // Debugging: Print the response
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(result);
+                    Console.WriteLine("Authentication successful.");
+                    Console.WriteLine($"Token: {tokenResponse.Token}");
+                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", tokenResponse.Token);
+
+                    // Decode the JWT token to extract roles
+                    var handler = new JwtSecurityTokenHandler();
+                    var jsonToken = handler.ReadToken(tokenResponse.Token) as JwtSecurityToken;
+
+                    var roleClaim = jsonToken?.Claims.FirstOrDefault(claim => claim.Type == "role")?.Value;
+                    Console.WriteLine($"Roles: {roleClaim}");
+
+                    // Check if the user is an admin
+                    if (roleClaim == "Admin")
+                    {
+                        isAdmin = true;
+                    }
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid username or password.");
+                    return false;
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error parsing JSON response: {ex.Message}");
+                Console.WriteLine($"An error occurred: {ex.Message}");
                 return false;
             }
         }
     }
-
-    public class AuthenticationResult
-    {
-        public string Token { get; set; }
-    }
-
-    public class Product
-    {
-        public string Category { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-    }
 }
+
 
 
 
