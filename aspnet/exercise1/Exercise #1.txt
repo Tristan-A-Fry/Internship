@@ -1,0 +1,88 @@
+1) Create an API using ASP.Net Core using the mock data found in "ProductData.cs". When running the API, it must display the Swagger UI page to test the endpoints. You must create the following endpoints using a controller called ProductController:
+	- GET https://localhost:{PORT}/api/v1/products
+		- Query Parameters (for pagination)
+			- skip = # of records to skip before fetching records
+			- take = # of records to fetch after skipping
+	- PUT https://localhost:{PORT}/api/v1/products
+		- Body parameter
+			- an JSON object with the Product's properties
+		- The endpoint must be used for upsert operation. If the record doesn't exists by name, must be created. If product exists by name, must update
+	- DELETE https://localhost:{PORT}/api/v1/products/{id}
+		- Route parameter
+			- id = id of the product to delete. Must handle
+
+The business logic must be implemented using a data service. The data service must implement IProductService interface, which must be registered in the IoC container (for dependency injection).
+Data must be transfered using JSON.
+
+Note: For this exercise, the API must store the product data in memory. Doesn't need have to be persisted in any storage. All the parameters and endpoints must be documented in Swagger
+
+
+2) Based on the problem #2 in Exercise #3 from the C# module, create an API using ASP.Net Core where you can upsert (insert/update) Product categories, suppliers, customers, products, orders and order's items. Must use Entity Framework for data storage. When running the API, it must display the Swagger UI page to test the endpoints.
+Create the following Controllers for the endpoints:
+	- ProductCategoryController
+		- GET https://localhost:{PORT}/api/v1/productCategories
+			- Query Parameters (for pagination)
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+		- PUT https://localhost:{PORT}/api/v1/productCategories
+			- Body parameter
+				- an JSON object with the entity's properties
+			- The endpoint must be used for upsert operation.
+
+
+	- SupplierController
+		- GET https://localhost:{PORT}/api/v1/suppliers
+			- Query Parameters (for pagination)
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+		- PUT https://localhost:{PORT}/api/v1/suppliers
+			- Body parameter
+				- an JSON object with the entity's properties
+			- The endpoint must be used for upsert operation.
+
+
+	- CustomerController
+		- GET https://localhost:{PORT}/api/v1/customers
+			- Query Parameters (for pagination)
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+		- PUT https://localhost:{PORT}/api/v1/customers
+			- Body parameter
+				- an JSON object with the entity's properties
+			- The endpoint must be used for upsert operation.
+
+
+	- ProductController
+		- GET https://localhost:{PORT}/api/v1/products
+			- Query Parameters (for pagination)
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+		- PUT https://localhost:{PORT}/api/v1/products
+			- Body parameter
+				- an JSON object with the entity's properties
+			- The endpoint must be used for upsert operation.
+
+
+	- OrderController
+		- GET https://localhost:{PORT}/api/v1/orders
+			- Query Parameters
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+				- customerID (optional) = fetch order for the specified customer. If the parameter is not provided, must return all orders
+		- PUT https://localhost:{PORT}/api/v1/orders
+			- Body parameter
+				- an JSON object with the entity's properties
+			- The endpoint must be used for upsert operation.
+		- GET https://localhost:{PORT}/api/v1/orders/{id}/items
+			- Route parameters
+				- id = id of the order that contains the purchased products
+			- Query parameters
+				- skip = # of records to skip before fetching records
+				- take = # of records to fetch after skipping
+		- PUT https://localhost:{PORT}/api/v1/orders/{id}/items
+			- Route parameters
+				- id = id of the order that will contain the product
+			- Body parameter
+				- an JSON object with the entity's properties
+
+Note: All the parameters and endpoints must be documented in Swagger. All the business logic must be behind an abstraction using an interface.
