@@ -1,0 +1,44 @@
+<button routerLink="/" class="go-back-home-button">Go Back To Home Page</button>
+
+<div class="container">
+  <div class="card">
+    <div class="total-per-person">
+      <h2>TOTAL P/PERSON</h2>
+      <div class="total">
+        <span>$</span><span>{{ totalPerPerson | number:'1.2-2' }}</span>
+      </div>
+      <div class="details">
+        <div class="subtotal">
+          <p>SUBTOTAL</p>
+          <p>${{ subtotal | number:'1.2-2' }}</p>
+        </div>
+        <div class="tip">
+          <p>TIP</p>
+          <p>${{ tipAmount | number:'1.2-2' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <label>Enter your bill: $ {{ billAmount }}</label>
+      <input type="number" [(ngModel)]="billAmount" (input)="calculate()">
+
+      <p>Choose your tip</p>
+      <div class="tip-buttons">
+        <button (click)="setTip(10)">10%</button>
+        <button (click)="setTip(15)">15%</button>
+        <button (click)="setTip(20)">20%</button>
+      </div>
+
+      <p>Tip: {{ tipPercentage }}%</p>
+      <input type="range" min="0" max="100" [(ngModel)]="tipPercentage" (input)="calculate()">
+
+      <p>Split the total</p>
+      <div class="split-buttons">
+        <button (click)="decreasePeople()">-</button>
+        <span>{{ numPeople }}</span>
+        <button (click)="increasePeople()">+</button>
+      </div>
+    </div>
+  </div>
+</div>

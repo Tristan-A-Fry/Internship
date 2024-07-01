@@ -1,0 +1,17 @@
+<button routerLink = "/" class="go-back-home-button">Go Back To Home Page</button>
+
+<div>
+  <label for="red">Red: {{ red }}</label>
+  <input id="red" type="range" min="0" max="255" [(ngModel)]="red" (input)="updateColor()">
+</div>
+<div>
+  <label for="green">Green: {{ green }}</label>
+  <input id="green" type="range" min="0" max="255" [(ngModel)]="green" (input)="updateColor()">
+</div>
+<div>
+  <label for="blue">Blue: {{ blue }}</label>
+  <input id="blue" type="range" min="0" max="255" [(ngModel)]="blue" (input)="updateColor()">
+</div>
+<div [ngStyle]="{'background-color': currentColor}" class="color-box"></div>
+<button (click)="generateRandomColor()">Generate Random Color</button>
+<button (click)="copyHexColor()">Copy Hex Color</button>

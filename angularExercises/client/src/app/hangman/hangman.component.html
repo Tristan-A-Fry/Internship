@@ -1,0 +1,29 @@
+<button routerLink = "/" class="go-back-home-button">Back to Home Page</button>
+
+<div class="hangman-container">
+  <div class="title">
+    <h1>Hangman Game</h1>
+  </div>
+  <div class="errors">
+    Errors: {{wrongGuesses}} of {{maxErrors}}
+  </div>
+  <div class="hangman-image">
+    <img [src]="getImagePath()" alt="Hangman">
+  </div>
+  <div class="word">
+    <span *ngFor="let letter of displayedWord">{{ letter }}</span>
+  </div>
+  <div class="letters">
+    <button *ngFor="let letter of alphabet" 
+            (click)="guessLetter(letter)" 
+            [disabled]="guessedLetters.includes(letter) || isGameWon() || isGameLost()"> <!--Disable letter butoons if guessed letter or disable all buttons if game lost / won-->
+      {{ letter }}
+    </button>
+  </div>
+  <div class="status">
+    <p *ngIf="isGameWon()">Congratulations, you won!</p>
+    <p *ngIf="isGameLost()">Sorry, you lost. The word was {{ word }}</p>
+  </div>
+  <button class="reset-button" (click)="resetGame()">Reset Game</button>
+</div>
+
