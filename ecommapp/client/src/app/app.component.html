@@ -1,0 +1,36 @@
+<div>
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput" [(ngModel)]="newCustomer.name" name="nameInput">
+</div>
+<div>
+  <label for="addressInput">Address:</label>
+  <input type="text" id="addressInput" [(ngModel)]="newCustomer.address" name="addressInput">
+</div>
+<div>
+  <label for="phoneInput">Phone Number:</label>
+  <input type="text" id="phoneInput" [(ngModel)]="newCustomer.phoneNumber" name="phoneInput">
+</div>
+<div>
+  <button (click)="createCustomer()">Create Customer</button>
+</div>
+
+<div>
+  <label for="skipInput">Skip:</label>
+  <input type="number" id="skipInput" [(ngModel)]="skipValue" name="skipInput">
+</div>
+<div>
+  <label for="takeInput">Take:</label>
+  <input type="number" id="takeInput" [(ngModel)]="takeValue" name="takeInput">
+</div>
+<div>
+  <button (click)="fetchCustomers()">Fetch Customers</button>
+</div>
+
+<div *ngIf="customers.length > 0">
+  <ul>
+    <li *ngFor="let customer of customers">
+      {{ customer.id }} - {{ customer.name }} - {{ customer.address }} - {{ customer.phoneNumber }}
+    </li>
+  </ul>
+</div>
+

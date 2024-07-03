@@ -1,0 +1,5 @@
+1) Based on the e-commerce application created in Exercise 3 in ASP.Net Core module, create the front-end web app using the Angular framework. The webapp must consume the API created in the ASP.Net module. Must create a login page to authenticate and consider the authorization access for certain resources (suppliers, productCategories, products). Once the users is authenticated, you must display each entity type using tabs except the order items. Order and order items must be in the same tab, since you must add at least one product to create an order. Only admin can view/edit suppliers, productCategories and products.
+
+
+Hint: For this exercise, you can optionally select a theme from the following website. Make sure it's compatible with the Angular framework
+	- https://themeforest.net/search/angular
