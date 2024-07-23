@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exercise3Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13300a04d662206b1852aeb90e42721270f3629e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4de79a7028fbac99a9f08ebd5b78912ee587f881")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exercise3Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exercise3Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

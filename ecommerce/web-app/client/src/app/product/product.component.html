@@ -1,0 +1,61 @@
+<button (click)="navigateToHome()">Home</button>
+<div>
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput" [(ngModel)]="newProduct.name" name="nameInput">
+</div>
+
+<div>
+  <label for="productCategoryId">Product Category Id:</label>
+  <input type="text" id="productCategoryId" [(ngModel)]="newProduct.productCategoryId" name="productCategoryId">
+</div>
+
+<div>
+  <label for="supplierId">Supplier Id:</label>
+  <input type="text" id="supplierId" [(ngModel)]="newProduct.supplierId" name="supplierId">
+</div>
+
+<div>
+  <label for="">description:</label>
+  <input type="text" id="descriptionInput" [(ngModel)]="newProduct.description" name="descriptionInput">
+</div>
+
+<!-- <div>
+  <label for="supplierInput">Supplier Name:</label>
+  <input type="text" id="supplierNameInput" [(ngModel)]="newProduct.supplier.name" name="supplierNameInput">
+</div> -->
+
+<div>
+  <button (click)="createProduct()">Create Product</button>
+</div>
+<div>
+    <button (click)="resetNewProduct()">Reset</button>
+</div>
+
+<div>
+  <label for="skipInput">Skip:</label>
+  <input type="number" id="skipInput" [(ngModel)]="skipValue" name="skipInput">
+</div>
+<div>
+  <label for="takeInput">Take:</label>
+  <input type="number" id="takeInput" [(ngModel)]="takeValue" name="takeInput">
+</div>
+
+
+
+<div>
+  <button (click)="fetchProducts()">Fetch Products</button>
+</div>
+
+
+
+<div *ngIf="products.length > 0">
+  <ul>
+    <li *ngFor="let product of products">
+      <p> Product Id: {{ product.id }}</p>
+      <p> Product Name: {{ product.name }} </p>
+      <p> Description: {{product.description}}</p>
+      <p> Product Category Id: {{product.productCategoryId}}</p> 
+      <p> Supplier Id: {{product.supplierId}}</p>
+    </li>
+  </ul>
+</div>

@@ -57,7 +57,8 @@ export class HangmanComponent implements OnInit {
   }
 
   resetGame(): void {
-    const words = ['ANGULAR', 'JAVASCRIPT', 'TYPESCRIPT', 'HANGMAN', 'TALOS'];
+    const words  = ['KYLIE IS A VAMPIRE'];
+    // const words = ['ANGULAR', 'JAVASCRIPT', 'TYPESCRIPT', 'HANGMAN', 'TALOS',' KYLIE IS A VAMPIRE'];
     this.word = words[Math.floor(Math.random() * words.length)];
     this.displayedWord = Array(this.word.length).fill('_');
     this.guessedLetters = [];
