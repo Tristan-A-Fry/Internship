@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecommapp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92c156e6522cc6b5991802930bea8d9356081743")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7378accce79fbf295f67956d19340a3a1172d21")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecommapp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecommapp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

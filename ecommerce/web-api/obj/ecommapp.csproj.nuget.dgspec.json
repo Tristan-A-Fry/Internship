@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tfry\\Internship\\ecommerce\\web-api\\ecommapp.csproj": {}
+    "E:\\Internship\\ecommerce\\web-api\\ecommapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tfry\\Internship\\ecommerce\\web-api\\ecommapp.csproj": {
+    "E:\\Internship\\ecommerce\\web-api\\ecommapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tfry\\Internship\\ecommerce\\web-api\\ecommapp.csproj",
+        "projectUniqueName": "E:\\Internship\\ecommerce\\web-api\\ecommapp.csproj",
         "projectName": "ecommapp",
-        "projectPath": "C:\\Users\\tfry\\Internship\\ecommerce\\web-api\\ecommapp.csproj",
-        "packagesPath": "C:\\Users\\tfry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tfry\\Internship\\ecommerce\\web-api\\obj\\",
+        "projectPath": "E:\\Internship\\ecommerce\\web-api\\ecommapp.csproj",
+        "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
+        "outputPath": "E:\\Internship\\ecommerce\\web-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tfry\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
