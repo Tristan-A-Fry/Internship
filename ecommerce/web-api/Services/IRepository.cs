@@ -31,6 +31,7 @@ namespace ecommapp.Services
 public interface IRepository<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync(int skip, int take);
+        Task<IEnumerable<T>> GetAllReceiptAsync();
         Task<T> GetByIdAsync(int id);
         Task<T> UpsertAsync(T Entity);
         Task<T> InsertAsync(T Entity);

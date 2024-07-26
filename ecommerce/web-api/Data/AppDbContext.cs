@@ -34,6 +34,33 @@ namespace ecommapp.Data
        public DbSet<OrderItem> OrderItems {get; set;}
        public DbSet<Product> Products {get; set;}
        public DbSet<User> Users {get; set;}
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Product>()
+            .HasOne(p => p.ProductCategory)
+            .WithMany(pc => pc.Products)
+            .HasForeignKey(p => p.ProductCategoryId);
+
+        modelBuilder.Entity<Product>()
+            .HasOne(p => p.Supplier)
+            .WithMany(s => s.Products)
+            .HasForeignKey(p => p.SupplierId);
+
+        modelBuilder.Entity<OrderItem>()
+            .HasOne(oi => oi.Product)
+            .WithMany()
+            .HasForeignKey(oi => oi.ProductId);
+
+        modelBuilder.Entity<OrderItem>()
+            .HasOne(oi => oi.Order)
+            .WithMany(o => o.OrderItems)
+            .HasForeignKey(oi => oi.OrderId);
+
+        modelBuilder.Entity<Order>()
+            .HasOne(o => o.Customer)
+            .WithMany()
+            .HasForeignKey("CustomerId");
+    }
     }
 }
 

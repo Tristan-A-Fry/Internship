@@ -33,8 +33,8 @@ namespace ecommapp.Data
                 await _context.SaveChangesAsync(); // Ensure IDs are generated
 
                 // Seed Products
-                var product1 = new Product { Name = "Product 1", ProductCategoryId = category1.Id, SupplierId = supplier1.Id, Description = "Description 1" };
-                var product2 = new Product { Name = "Product 2", ProductCategoryId = category2.Id, SupplierId = supplier2.Id, Description = "Description 2" };
+                var product1 = new Product { Name = "Product 1", ProductCategoryId = category1.Id, SupplierId = supplier1.Id, Description = "Description 1", Price = 20 };
+                var product2 = new Product { Name = "Product 2", ProductCategoryId = category2.Id, SupplierId = supplier2.Id, Description = "Description 2", Price = 10000000 };
                 _context.Products.AddRange(product1, product2);
 
                 await _context.SaveChangesAsync(); // Ensure IDs are generated
@@ -46,7 +46,7 @@ namespace ecommapp.Data
                 await _context.SaveChangesAsync(); // Ensure IDs are generated
 
                 // Seed Orders
-                var order1 = new Order { CustomerId = customer1.Id, OrderDate = DateTime.UtcNow };
+                var order1 = new Order { Customer = customer1, OrderDate = DateTime.UtcNow };
                 _context.Orders.Add(order1);
 
                 await _context.SaveChangesAsync(); // Ensure IDs are generated

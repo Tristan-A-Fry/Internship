@@ -11,8 +11,8 @@ using ecommapp.Data;
 namespace ecommapp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240722161617_test3")]
-    partial class test3
+    [Migration("20240725230101_removedCustomerIdFromOrderModel")]
+    partial class removedCustomerIdFromOrderModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -100,6 +100,9 @@ namespace ecommapp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("ProductCategoryId")
                         .HasColumnType("INTEGER");
 
@@ -107,6 +110,10 @@ namespace ecommapp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductCategoryId");
+
+                    b.HasIndex("SupplierId");
 
                     b.ToTable("Products");
                 });
@@ -194,9 +201,38 @@ namespace ecommapp.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ecommapp.Models.Product", b =>
+                {
+                    b.HasOne("ecommapp.Models.ProductCategory", "ProductCategory")
+                        .WithMany("Products")
+                        .HasForeignKey("ProductCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommapp.Models.Supplier", "Supplier")
+                        .WithMany("Products")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductCategory");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("ecommapp.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("ecommapp.Models.ProductCategory", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ecommapp.Models.Supplier", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

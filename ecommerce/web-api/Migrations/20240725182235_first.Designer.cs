@@ -11,8 +11,8 @@ using ecommapp.Data;
 namespace ecommapp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240722161430_test2")]
-    partial class test2
+    [Migration("20240725182235_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,10 @@ namespace ecommapp.Migrations
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("TEXT");
@@ -100,6 +104,9 @@ namespace ecommapp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("ProductCategoryId")
                         .HasColumnType("INTEGER");
 
@@ -107,6 +114,10 @@ namespace ecommapp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductCategoryId");
+
+                    b.HasIndex("SupplierId");
 
                     b.ToTable("Products");
                 });
@@ -194,9 +205,38 @@ namespace ecommapp.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ecommapp.Models.Product", b =>
+                {
+                    b.HasOne("ecommapp.Models.ProductCategory", "ProductCategory")
+                        .WithMany("Products")
+                        .HasForeignKey("ProductCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommapp.Models.Supplier", "Supplier")
+                        .WithMany("Products")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductCategory");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("ecommapp.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("ecommapp.Models.ProductCategory", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ecommapp.Models.Supplier", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -39,13 +39,27 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRepository<User>, Repository<User>> ();
-builder.Services.AddScoped<IRepository<ProductCategory>, Repository<ProductCategory>>();
+
+
+
 builder.Services.AddScoped<IRepository<Supplier>, Repository<Supplier>>();
+
 builder.Services.AddScoped<IRepository<Customer>, Repository<Customer>>();
-builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
-builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
-builder.Services.AddScoped<IRepository<OrderItem>, Repository<OrderItem>>();
-builder.Services.AddScoped<OrderRepository>();
+
+// builder.services.addscoped<irepository<order>, orderRepository>();
+// builder.Services.AddScoped<IRepository<OrderItem>, Repository<OrderItem>>();
+// builder.Services.AddScoped<OrderRepository>();
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+
+builder.Services.AddScoped<IReceiptRepository, ReceiptRepository>();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IRepository<ProductCategory>, Repository<ProductCategory>>();
+
+
+
 builder.Services.AddScoped<DataSeeder>();
 
 var configuration = builder.Configuration;

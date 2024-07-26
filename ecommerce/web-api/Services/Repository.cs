@@ -54,6 +54,12 @@ namespace ecommapp.Services
             return await _dbSet.Skip(skip).Take(take).ToListAsync();
         }
 
+        //ForReceipt
+        public async Task<IEnumerable<T>> GetAllReceiptAsync()
+        {
+            return await _dbSet.ToListAsync();
+        }
+
        public async Task<T> GetByIdAsync(int id)
        {
         return await _dbSet.FindAsync(id);

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ecommapp.Models;
 using ecommapp.Services;
 using Microsoft.AspNetCore.Authorization;
+using ecommapp.DTO;
 
 namespace ecommapp.Controllers
 {
@@ -11,26 +12,30 @@ namespace ecommapp.Controllers
     [Route("api/v1/[controller]")]
     public class ProductController : ControllerBase
     {
-        private readonly IRepository<Product> _repository;
+        private readonly IProductRepository _repository;
         
 
-        public ProductController(IRepository<Product>  repository)
+        public ProductController(IProductRepository  repository)
         {
             _repository = repository;
         }
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet] 
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts([FromQuery] int skip, [FromQuery]int take)
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts([FromQuery] int skip, [FromQuery]int take)
         {
-            var products = await _repository.GetAllAsync(skip, take);
+            var products = await _repository.GetProductsAsync(skip, take);
             return Ok(products);
         }
 
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPut]
-        public async Task<ActionResult<Product>> UpsertCustomers([FromBody] Product products)
+        public async Task<ActionResult<ProductDTO>> UpsertCustomers([FromBody] Product products)
         {
-            var upsertedProducts= await _repository.UpsertAsync(products);
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var upsertedProducts= await _repository.UpsertProductAsync(products);
             return Ok(upsertedProducts);
         }
     }
