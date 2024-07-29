@@ -45,15 +45,17 @@ namespace ecommapp.Data
 
                 await _context.SaveChangesAsync(); // Ensure IDs are generated
 
-                // Seed Orders
-                var order1 = new Order { Customer = customer1, OrderDate = DateTime.UtcNow };
-                _context.Orders.Add(order1);
-
-                await _context.SaveChangesAsync(); // Ensure IDs are generated
 
                 // Seed OrderItems
-                var orderItem1 = new OrderItem { OrderId = order1.Id, ProductId = product1.Id, Quantity = 2 };
+                var orderItem1 = new OrderItem { ProductId = product1.Id, Quantity = 2 };
                 _context.OrderItems.Add(orderItem1);
+
+                // await _context.SaveChangesAsync(); // Ensure IDs are generated
+
+                // Seed Orders
+                var order1 = new Order { Customer = customer1, OrderDate = DateTime.UtcNow, OrderItems = new List<OrderItem> { orderItem1 } };
+                _context.Orders.Add(order1);
+
 
                 await _context.SaveChangesAsync();
             }
