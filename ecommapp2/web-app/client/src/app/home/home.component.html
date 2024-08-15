@@ -1,0 +1,12 @@
+<p> welcome {{username}}</p>
+<p>you are authenticated = {{authenticated}}</p>
+<p>you are authorized = {{authorized}}</p>
+<p>token = {{token}}</p>
+<p>your role is {{roles.join(', ')}}</p>
+<button (click)="logout()">logout</button>
+<button (click)="navigateToCustomers()"> Customers </button>
+<button (click)="navigateToOrders()"> Orders </button>
+<button (click)="navigateToProducts()"> Products </button>
+<button (click)="navigateToSuppliers()"> Suppliers </button>
+<button (click)="navigateToProductCategories()"> Product Categories </button>
+<button (click)="navigateToUsers()"> Users </button>

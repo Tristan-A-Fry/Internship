@@ -1,0 +1,36 @@
+
+<button (click)="navigateToHome()">Home</button>
+<div>
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput" [(ngModel)]="newProductCategory.name" name="nameInput">
+</div>
+<div>
+  <button (click)="createProductCategory()">Create Product Category</button>
+</div>
+<div>
+    <button (click)="resetNewProductCategory()">Reset</button>
+</div>
+
+<div>
+  <label for="skipInput">Skip:</label>
+  <input type="number" id="skipInput" [(ngModel)]="skipValue" name="skipInput">
+</div>
+<div>
+  <label for="takeInput">Take:</label>
+  <input type="number" id="takeInput" [(ngModel)]="takeValue" name="takeInput">
+</div>
+
+
+<div>
+  <button (click)="fetchProductCategory()">Fetch Product Categories</button>
+</div>
+
+
+
+<div *ngIf="productCategories.length > 0">
+  <ul>
+    <li *ngFor="let productCategory of productCategories">
+      {{ productCategory.id }} - {{ productCategory.name }}
+    </li>
+  </ul>
+</div>

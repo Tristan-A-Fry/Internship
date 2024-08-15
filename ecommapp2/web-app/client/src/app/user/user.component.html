@@ -1,0 +1,89 @@
+<button (click)="navigateToHome()">Home</button>
+
+<div>
+    <label for="usernameInput">Username: </label>
+    <input type="text" id="usernameInput" [(ngModel)]="newUser.username" name="usernameInput">
+</div>
+<div>
+    <label for="passwordInput">Password: </label>
+    <input type="text" id="passwordInput" [(ngModel)]="newUser.password" name="passwordInput">
+</div>
+<div>
+    <label for="roleInput">Role: </label>
+    <input type="text" id="roleInput" [(ngModel)]="newUser.role" name="roleInput">
+</div>
+<div>
+    <button (click)="createUser()">Create New User</button>
+    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+</div>
+<div>
+  <button (click)="fetchUsers()">Fetch Users</button>
+</div>
+
+<div *ngIf="users.length > 0">
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.id }} - {{ user.username }} - {{user.role}}
+    </li>
+  </ul>
+</div>
+
+
+<div *ngIf="users.length > 0; else noUsers">
+  <h3>Users</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button (click)="startEditUser(user)">Edit</button>
+          <button (click)="deleteUser(user)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noUsers>
+  <p>No users found.</p>
+</ng-template>
+
+
+
+
+
+
+<div *ngIf="editUser">
+  <h3>Edit User</h3>
+  <form #editForm="ngForm" (ngSubmit)="updateUser()">
+    <input type="text" [(ngModel)]="editUser.username" name="editUsername" placeholder="Username" required>
+    <div *ngIf="editForm.submitted && editForm.controls['editUsername']?.invalid" class="error-message">
+      Username is required.
+    </div>
+
+    <input type="password" [(ngModel)]="editUser.password" name="editPassword" placeholder="Password" required minlength="6">
+    <div *ngIf="editForm.submitted && editForm.controls['editPassword']?.invalid" class="error-message">
+      Password is required and must be at least 6 characters long.
+    </div>
+
+    <select [(ngModel)]="editUser.role" name="editRole" required>
+      <option value="" disabled>Select Role</option>
+      <option value="Admin">Admin</option>
+      <option value="Regular">Regular</option>
+    </select>
+    <div *ngIf="editForm.submitted && editForm.controls['editRole']?.invalid" class="error-message">
+      Role is required.
+    </div>
+
+    <button type="submit">Update User</button>
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

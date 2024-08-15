@@ -1,0 +1,101 @@
+<button (click)="navigateToHome()">Home</button>
+<div>
+  <label for="dateInput">Order Date:</label>
+  <input type="text" id="dateInput" [(ngModel)]="newOrder.orderDate" name="dateInput">
+</div>
+
+<div>
+  <label for="customerId">Customer Id:</label>
+  <input type="text" id="customerId" [(ngModel)]="newOrder.customerId" name="customerId">
+</div>
+
+<div>
+  <label for="customerName">Customer Name:</label>
+  <input type="text" id="customerName" [(ngModel)]="newOrder.customer.name" name="customerName">
+</div>
+
+<div>
+  <label for="customerAddress">Customer Address:</label>
+  <input type="text" id="customerAddress" [(ngModel)]="newOrder.customer.address" name="customerAddress">
+</div>
+
+<div>
+  <label for="customerPhoneNumber">Customer Phone Number:</label>
+  <input type="text" id="customerPhoneNumber" [(ngModel)]="newOrder.customer.phoneNumber" name="customerPhoneNumber">
+</div>
+
+<div>
+  <button (click)="createOrder()">Create Order</button>
+</div>
+<div>
+    <button (click)="resetNewOrder()">Reset</button>
+</div>
+
+<div>
+  <label for="skipInput">Skip:</label>
+  <input type="number" id="skipInput" [(ngModel)]="skipValue" name="skipInput">
+</div>
+<div>
+  <label for="takeInput">Take:</label>
+  <input type="number" id="takeInput" [(ngModel)]="takeValue" name="takeInput">
+</div>
+<div>
+  <label for="customerId">CustomerId:</label>
+  <input type="number" id="customerId" [(ngModel)]="customerId" name="customerId">
+</div>
+
+
+
+<div>
+  <button (click)="fetchOrders()">Fetch Orders</button>
+</div>
+
+<div *ngIf="orders.length > 0">
+  <ul>
+    <li *ngFor="let order of orders">
+      <p> Order Id: {{ order.id }}</p>
+      <p> Order Date: {{ order.orderDate }} </p>
+      <p> Customer Id: {{order.customer.id}}</p>
+      <p> Customer Name: {{order.customer.name}}</p> 
+      <p> Customer address: {{order.customer.address}}</p>
+      <p> Customer Phone Number: {{order.customer.phoneNumber}}</p>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h3>Enter Order ID to fetch Order Items:</h3>
+  <input type="number" [(ngModel)]="orderId" placeholder="Enter Order ID">
+    <label for="skipInput">Skip:</label>
+    <input type="number" id="skipInput" [(ngModel)]="skipValue" name="skipInput">
+    <label for="takeInput">Take:</label>
+    <input type="number" id="takeInput" [(ngModel)]="takeValue" name="takeInput">
+  <button (click)="fetchOrderItems()">Fetch Order Items</button>
+</div>
+
+<div *ngIf="orderItems.length > 0; else noItems">
+  <h3>Order Items for Order ID: {{ orderId }}</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Supplier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of orderItems">
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.product.description }}</td>
+        <td>{{ item.product.productCategoryId }}</td>
+        <td>{{ item.product.supplierId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noItems>
+  <p>No items found for this order.</p>
+</ng-template>
